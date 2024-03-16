@@ -26,6 +26,7 @@
     "dotenv": "^16.4.5",
     "mongodb": "^6.5.0",
     "ng5-slider": "^1.2.6",
+    "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.12",
     "nodemailer-express-handlebars": "^6.1.2",
     "realm-web": "^2.0.0",
