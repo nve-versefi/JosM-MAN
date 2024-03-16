@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const environment = {\n  production: true,\n  apiUrl: 'https://josm-backend-6599f0686bc6.herokuapp.com' // URL del servidor de desarrollo\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
