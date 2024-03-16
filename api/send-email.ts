@@ -1,8 +1,9 @@
 // /api/send-email.ts
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-const nodemailer = require('nodemailer');
-const path = require('path');
-const hbs = require('nodemailer-express-handlebars');
+import * as nodemailer from 'nodemailer';
+import * as path from 'path';
+import * as hbs from 'nodemailer-express-handlebars';
+
 
 
 
