@@ -1,0 +1,13 @@
+<app-page-title [mainHeading] = "heading" ></app-page-title>
+
+
+<div class="grid-container">
+  <div *ngFor="let foto of galeria; let i = index">
+    <img [class]="'grid-item grid-item-' + (i + 1)"  [src]="'/galeria/' + foto.imageUrl" alt="">
+    <p>{{ foto.caption }}</p>
+  </div>
+</div>
+
+<div class="videos">
+<app-videos></app-videos>
+</div>

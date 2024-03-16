@@ -1,0 +1,11 @@
+<app-page-title [mainHeading] = "heading" ></app-page-title>
+<div class="slider">
+    <div class="slide-track">
+      <div class="slide" *ngFor="let slide of slides">
+        <a [routerLink]="slide.link">
+          <img [src]="slide.imageUrl" height="100" width="250" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+  

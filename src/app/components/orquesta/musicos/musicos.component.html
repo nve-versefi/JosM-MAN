@@ -1,0 +1,13 @@
+<app-page-title [mainHeading]="heading"></app-page-title>
+<div class="personas" >
+  <div class="container" *ngFor="let instrumento of instrumentos; let i = index"  (click)="openPopup(instrumento)"  [style.background-image]="'url(' + instrumento.imagen + ')'"> 
+ 
+    <div class="inf">
+    <h1 class="nombre">{{ instrumento.nombre }}</h1>
+
+
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,85 @@
+
+
+.logo img {
+  float: right;
+  width: 300px;
+}
+
+.header {
+  font-weight: bolder;
+  //font-family: 'Times New Roman', Times, serif, 'Montserrat', sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #ff7b004a, #0000006c, #ff7b004a),
+    url('/assets/img/ecorial.jpg');
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  clip-path: circle(180vh at 50% -80vh);
+}
+
+.brand-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.brand {
+  font-size: 20px;
+}
+
+.text-box {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 10px;
+  background: linear-gradient(to to, #ff7b002f, #0000006c, #ff7b004a);
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 33px;
+  letter-spacing: 14.4px;
+}
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+  background-color: wheat;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #fff;
+  color: #777;
+  font-size: 14px;
+}

@@ -1,0 +1,251 @@
+.funcionamiento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    height:4%;
+    margin: 20px;
+;
+display: flex;
+justify-content: center;
+
+
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.present{
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    margin: 20px;
+}
+
+.present .text{
+    transition: transform 1s, font-size 5s;
+    animation:  slideSide 2s;
+    display: flex;
+    text-align: center;
+    justify-self: center;
+    font-size: 19px;
+    height: 55%;
+    border-radius: 10px;
+    font-weight:lighter;
+    background-color:#012639;
+    color:wheat;
+    width: 50%;
+    margin-left: 30px;
+    padding: 25px;
+    align-self: center;
+
+}
+
+.text p{
+    margin: 15px;
+}
+.img{
+    transition: transform 1s;
+
+    border-radius: 10px;
+    background-color: red;
+    width: 60%;
+}
+
+.text:hover, .img:hover{
+    color:black;
+    transform: translateY(-10px);
+    font-weight: bolder;
+
+}
+
+
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    filter: blur(0);
+    color: transparent;
+    transition: filter 1s, transform 2s;
+    margin: 5px;
+    width: 70%;
+    justify-content: center;
+    animation:  slideSide 2s;
+
+
+}
+
+.c1{
+
+    .back{
+        background-image: url('../../../../assets/img/orquesta4.jpg');
+        background-position: center;
+
+    }
+
+}
+
+.c2{
+
+    .back{
+        background-image: url('../../../../assets/img/orquesta5.jpeg');
+        background-position: center;
+
+    }
+
+}
+.c3{
+
+    .back{
+        background-image: url('../../../../assets/img/FIERRO.jpg');
+        background-position:70%;
+
+    }
+
+}
+
+.c4{
+
+    .back{
+        background-image: url('../../../../assets/img/partitura.jpg');
+        background-position: center;
+
+    }
+
+}
+
+
+.cont p{
+    width: 80%;
+    height: 1%;
+   font-weight: bolder;
+   align-self: center;
+        transform: translateY(100px);
+
+
+}
+
+
+@keyframes slideSide {
+   from{
+    transform: translatex(200%);
+    opacity: 0.5;
+   }to{
+    transform: translatex(0);
+opacity: 1;
+   }
+    
+}
+@keyframes slideIn {
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+
+    }
+    to{ 
+        opacity: 1;
+        transform: translateY(150%);
+    }
+}
+@keyframes slideOut {
+    from{
+        opacity:1;
+
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
+
+.back h1{
+    font-size: 1.5em;
+    height: 1%;
+    margin: 20px;
+    padding: 20px;
+    font-weight: bolder;
+    
+
+}
+
+
+
+
+.cont:hover p{
+    transform: translateY(150%);
+    animation: slideIn 1.5s;
+    color: white;
+}
+
+button{
+    opacity: 0;
+}
+.cont:hover button{
+    opacity: 1;
+
+}
+
+
+.back{
+    border-radius: 10px;
+
+    z-index: -1;
+    filter: blur(0px);
+    color: white;
+    background-size: cover;
+    height: 99%;
+    transition: filter 1s;
+    align-items: center;
+}
+
+
+.cont:hover .back{
+    filter: blur(13px) grayscale(100%);
+
+}
+
+.cont:hover .back h1{
+    animation: slideOut 3s;
+    opacity: 0;
+filter: grayscale(100%);    filter: blur(13px);
+
+}
+
+
+button {
+    height: 25px;
+    font-size: 13px;
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+  
+button:hover {
+    transform: translateY(-10%);
+    text-shadow: 10px 10px 10px rgb(47, 0, 255);
+    background-color: orange;
+    color: rgb(255, 255, 255);
+  }
+  

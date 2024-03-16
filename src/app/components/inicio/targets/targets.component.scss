@@ -1,0 +1,22 @@
+$primary-color-plane: #fa8601;
+
+
+.custom-video-iframe {
+  border: 2px solid $primary-color-plane; /* Cambia el color del borde a rojo */
+  border-radius: 10px; /* Agrega bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave */
+    margin-top: 7%;
+
+}
+
+.vid{
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  background-image: linear-gradient(to right bottom, #9851006c, #012f464a, #9851006c),url('../../../../assets/img/orquesta5.jpeg');
+  background-position: center;
+  background-size: cover; /* Ajustar la imagen de fondo al contenedor */
+  clip-path: circle(180vh at 50% 180vh) ;
+
+
+}

@@ -1,0 +1,33 @@
+<form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+  
+    <div>
+      <label for="title">Título:</label>
+      <input type="text" id="title" [(ngModel)]="formData.title" name="title" required>
+    </div>
+  
+    <div>
+      <label for="date">Fecha:</label>
+      <input type="text" id="date" [(ngModel)]="formData.date" name="date" required>
+    </div>
+  
+    <div>
+      <label for="description">Descripción:</label>
+      <textarea id="description" [(ngModel)]="formData.description" name="description" required></textarea>
+    </div>
+  
+    <div>
+      <label for="tag">Etiqueta:</label>
+      <input type="text" id="tag" [(ngModel)]="formData.tag" name="tag" required>
+    </div>
+  
+    <div>
+      <label for="duration">Duración:</label>
+      <input type="text" id="duration" [(ngModel)]="formData.duration" name="duration" required>
+    </div>
+    <div>
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" (change)="handleImageChange($event)" name="image" accept="image/*" required>
+      </div>
+    <button type="submit">Enviar</button>
+  </form>
+  

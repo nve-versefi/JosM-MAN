@@ -1,0 +1,21 @@
+@import "assets/variables.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family:'Montserrat'
+    ;
+    margin: 0;
+    --dot-bg: #012f46;
+    --dot-color: white;
+    --dot-size: 1.1px;
+    --dot-space: 22px;
+    background: 
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+    background-color:black;
+
+}
+

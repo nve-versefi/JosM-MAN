@@ -1,0 +1,25 @@
+<div class="menu-container">
+  <input type="checkbox" id="openmenu" class="hamburger-checkbox">
+  <div class="hamburger-icon">
+    <label for="openmenu" id="hamburger-label">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div class="menu-pane">
+    <nav>
+      <section *ngFor="let option of menuOptions" [attr.id]="option.id">
+        <div class="mainBtn">
+          <span><a routerLink="{{option.link}}">{{ option.label }}</a></span>
+        </div>
+        <ul *ngIf="option.subOptions">
+          <li *ngFor="let subOption of option.subOptions">
+            <a routerLink="{{subOption.link}}">{{ subOption.label }}</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+</div>

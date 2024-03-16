@@ -1,0 +1,123 @@
+@mixin border-gradient($from, $to, $weight: 0) {
+  $mix-main: mix($from, $to);
+  $mix-sub-from: mix($mix-main, $from);
+  $mix-sub-to: mix($mix-main, $to);
+  
+  box-shadow: 0 2px 0 $weight rgba($mix-sub-to, .25),
+              0 -2px 0 $weight rgba($mix-sub-from, .25),
+              2px 0 0 $weight rgba($mix-sub-to, .25),
+              -2px 0 0 $weight  rgba($mix-sub-from, .25),
+              2px -2px 0 $weight rgba($mix-main, .5),
+              -2px 2px 0 $weight rgba($mix-main, .5),
+              2px 2px 0 $weight rgba($to, .75),
+              -2px -2px 0 $weight rgba($from, .75);
+}
+.table-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  overflow-x: auto;
+  align-items: center;
+  margin: 10px;
+	background: linear-gradient(-45deg,#012f46,#012f46);
+color: white;
+
+}
+
+
+.cont1, .cont2 , .cont3{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.cont1{
+  border-radius: 15px;
+
+}
+
+.botones{
+  display: flex;
+  flex-direction: row;
+}
+
+.botones a {
+  margin: 40px
+}
+
+
+
+.presentacion{
+  @include border-gradient(#fe7b00a4,#d59423, 3px);
+	background: linear-gradient(-45deg, #fe7b00a4, #bb5a00, #d59423, #f1750089);
+	background: linear-gradient(#012f46,#012f46);
+
+  font-weight: bolder;
+  padding: 30px;
+  display:flex ;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 50%;
+  align-self: center;
+  margin-right: 80px;
+  animation: slideL 1s ease-out; /* Aplica la animación */
+  margin: 40px;
+
+}
+ app-contacto{
+  animation: slideR 1s ease-out; /* Aplica la animación */
+  width: 50%;
+
+ }
+
+ @keyframes slideL {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideR {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+  background-color: wheat;
+  color: #000000;
+  font-weight: bolder;
+
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #fff;
+  color: #777;
+  font-size: 14px;
+}

@@ -1,0 +1,39 @@
+<app-page-title [mainHeading]="heading"></app-page-title>
+
+<div class="instit">
+  <div class="slider">
+    <h1>Colaboradores</h1>
+
+    <div class="slide-track s">
+      <div class="slide" *ngFor="let slide of slidesCol">
+        <a [routerLink]="slide.link">
+          <img [src]="slide.imageUrl" height="100" width="250" alt="" [class]="'slide-img-' + slide.id" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider">
+    <h1>Colaboradores externos</h1>
+
+    <div class="slide-track s">
+      <div class="slide" *ngFor="let slide of slides">
+        <a [routerLink]="slide.link">
+          <img [src]="slide.imageUrl" height="100" width="250" alt="" [class]="'slide-img-' + slide.id" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-no">
+    <h1>Otros colaboradores</h1>
+
+    <div class="slide-track-no">
+      <div class="slide" *ngFor="let slide of slidesOtros">
+        <a [routerLink]="slide.link">
+          <img [src]="slide.imageUrl" height="100" width="250" alt="" [class]="'slide-img-' + slide.id" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

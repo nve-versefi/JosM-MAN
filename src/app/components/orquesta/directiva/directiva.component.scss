@@ -1,0 +1,164 @@
+.personas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: apear 1.5s ease;  
+
+}
+
+.container {
+    font-size: 12px;
+    border-radius: 10px;
+    width: 22%;
+	background: linear-gradient(-45deg, #fe7b00a4, #bb7000, #d59423, #f17400c0);
+    animation: gradient 20s ease infinite,  float 80s ease infinite ;  
+    box-shadow: 0 10px 20px black;
+	background-size: 400% 400%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    display: block; /* Agregado para mostrar en fila */
+    margin: 10px; /* Ajusta según sea necesario */
+}
+
+
+@keyframes apear {
+	0%{
+		transform: translatex(-100%);
+        opacity: 0.5;
+	}
+    50%{
+        transform: translatex(5%);
+        opacity: 0.7;
+
+
+    }
+
+	100%{
+		transform: translatex(0);
+        opacity: 1;
+
+	}
+}
+
+@keyframes float {
+	0%{
+		transform: translatex(1%);
+	}
+    
+    25%{
+        transform: translatex(-1%);
+
+    }
+
+    50%{
+        transform: translatex(1%);
+
+    }
+    75%{
+        transform: translatex(-1%);
+
+    }
+
+
+	100%{
+		transform: translatex(0);
+	}
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+.image {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    box-shadow: 0 2px 15px rgb(58, 54, 54);
+    transform: rotate(-20deg);
+    background-position:inherit ;
+}
+
+.shape {
+    height: 250px;
+    width: 400px;
+    background-color: black;
+    margin-left: -20px;
+    position: relative;
+    top: -80px;
+    box-shadow: 0 2px 15px black;
+    transform: rotate(25deg);
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    
+    color: rgb(0, 0, 0);
+}
+
+
+.icons {
+    margin-top: 15px;
+    display: flex; /* Agregado para mostrar en fila */
+    justify-content: center; /* Alinea los iconos al centro */
+    align-items: center; /* Centra verticalmente los iconos */
+}
+
+.icons i {
+    margin: 0 10px; /* Ajusta el espacio entre los iconos */
+    font-size: 20px;
+    transition: 0.3s;
+    color: rgb(40, 163, 194);
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+    color: rgb(18, 192, 235);
+}
+
+.nombre{
+    font-size: 17px;
+}
+
+
+button {
+    height: 40px;
+    font-size: 13px;
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+  
+button:hover {
+    transform: translateY(-10%);
+    text-shadow: 10px 10px 10px rgb(47, 0, 255);
+    background-color: orange;
+    color: rgb(255, 255, 255);
+  }
+  

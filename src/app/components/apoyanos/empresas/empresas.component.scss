@@ -1,0 +1,125 @@
+
+
+
+@mixin border-gradient($from, $to, $weight: 0) {
+  $mix-main: mix($from, $to);
+  $mix-sub-from: mix($mix-main, $from);
+  $mix-sub-to: mix($mix-main, $to);
+  
+  box-shadow: 0 2px 0 $weight rgba($mix-sub-to, .25),
+              0 -2px 0 $weight rgba($mix-sub-from, .25),
+              2px 0 0 $weight rgba($mix-sub-to, .25),
+              -2px 0 0 $weight  rgba($mix-sub-from, .25),
+              2px -2px 0 $weight rgba($mix-main, .5),
+              -2px 2px 0 $weight rgba($mix-main, .5),
+              2px 2px 0 $weight rgba($to, .75),
+              -2px -2px 0 $weight rgba($from, .75);
+}
+table, .rangos, .presentacion{
+  margin: 20px;
+}
+
+
+.cont1, .cont2 , .cont3{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.cont1{
+  border-radius: 15px;
+  font-size: large;
+
+}
+
+
+.cont3{
+  justify-content: center;
+  border-radius: 15px;
+}
+
+
+.rangos{
+  animation: slideIn 1s ease-out; /* Aplica la animación */
+  padding: 20px;
+  display:flex ;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+	background: linear-gradient(-45deg, #da6900a4, #994700, #9f6200);
+  font-weight: bolder;
+  border-radius: 15px;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+table {
+  font-weight: bolder;
+	background: linear-gradient(-45deg, #ee9b52, #e7a53c, #d5cc23, #d5d523);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;  
+  width: 55%;
+  border-collapse: collapse;
+  border-radius: 15px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+th, td {
+  border: 3px solid #012f46;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  position: relative;
+}
+
+.rank-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-button {
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.benefit-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+svg {
+  margin: auto;
+  fill: white;
+}

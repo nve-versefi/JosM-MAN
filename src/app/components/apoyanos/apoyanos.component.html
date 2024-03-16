@@ -1,0 +1,45 @@
+<app-page-title [mainHeading] = "heading" ></app-page-title>
+
+<div class="table-container">
+
+<div class="cont1">
+  <div class="presentacion">
+    <h2>Somos la JOsM</h2><br>
+  <p>Nuestro objetivo es promocionar la música clásica y sinfónica,
+    entregando una experiencia única que deje huella en quien nos
+    escuche. Así, nuestros jóvenes artistas de alto nivel ofrecen al
+    público repertorio de alta calidad y excelencia, desarrollan su
+    máximo potencial, y ponen en valor la importancia de la
+    música en nuestro día a día</p><br>
+    <h2>CÓMO TE GUSTARÍA SER PARTE DE NUESTRA HISTORIA?</h2><br>
+  <p>Más de 8000 personas - solo en nuestro primer año - ya han
+    podido ser testigos del fenómeno que hemos provocado en
+    los pueblos de la sierra madrileña a través de numerosos
+    conciertos.
+    Si deseas unirte a la JOsM, ya sea desde una institución, una
+    empresa o un particular, tenemos ya una propuesta para ti.
+    A continuación, encontrarás distintas posibilidades que te
+    ofrecemos para aportar y hacerte parte de nuestra historia</p><br>
+  <p>Gracias al éxito que el proyecto ha alcanzado en su debut durante
+    la temporada 22/23, muchas audiencias y personas particulares
+    han visto el valor de lo que entrega la JOsM a su comunidad,
+    decidiendo dar un paso adelante y aportando con el proyecto
+    para hacerlo crecer.</p><br>
+  <p>Te ofrecemos los diferentes formatos en los que participar:
+  </p><br>
+  </div>
+
+  <app-contacto></app-contacto>
+</div>
+<div class="botones">
+  <a (click)="navToEmpresas()" class="btn btn-white btn-animated">{{botonEmpresas}}</a>
+  <a (click)="navToParticulares()" class="btn btn-white btn-animated">{{botonParticulares}}</a>
+</div>
+
+
+<router-outlet></router-outlet>
+
+</div>
+
+
+

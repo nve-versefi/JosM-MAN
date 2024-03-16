@@ -1,0 +1,26 @@
+<h1 class="h1 text-center" id="pageHeaderTitle">Contacto</h1>
+
+<form id="form" class="topBefore" (ngSubmit)="submitForm()" [formGroup]="formulario">
+  <div *ngFor="let field of formFields">
+    <input
+      [id]="field.id"
+      [type]="field.type"
+      [placeholder]="field.placeholder"
+      [(ngModel)]="formularioData[field.id]" 
+      [formControlName]="field.id"  
+    />
+    <div *ngIf="formulario.get(field.id)?.invalid && (formulario.get(field.id)?.dirty || formulario.get(field.id)?.touched)">
+      <span *ngIf="formulario.get(field.id)?.hasError('required')">Este campo es obligatorio.</span>
+      <span *ngIf="formulario.get(field.id)?.hasError('email')">Ingrese una dirección de correo electrónico válida.</span>
+      <span *ngIf="formulario.get(field.id)?.hasError('minlength')">El campo debe tener al menos {{ formulario.get(field.id)?.getError('minlength')?.requiredLength }} caracteres.</span>
+      <span *ngIf="formulario.get(field.id)?.hasError('pattern')">El formato es incorrecto.</span>
+      
+    </div>
+  </div>
+
+  <input id="submit" type="submit" value="GO!" />
+</form>
+
+<div *ngIf="correoEnviado">
+  <p>¡Correo enviado con éxito!</p>
+</div>

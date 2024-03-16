@@ -1,0 +1,41 @@
+
+<app-page-title [mainHeading] = "heading" ></app-page-title>
+
+<div class="funcionamiento">
+
+    <div class="present">
+
+      <div class="text"><p>Somos una orquesta joven con pretensiones
+    
+        y aspiraciones muy ambiciosas, que hemos nacido
+        
+        para revolucionar los formatos tradicionales.
+        
+        ​
+        
+        Somos pioneros en políticas de apoyo a los jóvenes 
+        
+        músicos, mediante un proyecto formativo, de 
+        
+        apoyo mediante becas y con un plan desarrollado
+        
+        para tener espacios de intercambio de experiencias
+        
+        en los encuentros.</p> </div> 
+
+
+    </div>
+    <div *ngFor="let item of info; let i = index" class="cont c{{ i + 1 }}">
+        <p>{{ item.parrafo }}
+          
+            <button (click)="openPopup(item)">Leer mas</button>
+
+        </p>
+        <div class="back">
+          <h1>{{item.titulo}}</h1>
+        </div>
+    </div>
+
+
+
+</div>

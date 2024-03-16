@@ -1,0 +1,22 @@
+/* Estilos para el popup */
+
+  /* Estilos para oscurecer el fondo detrás del popup */
+
+  /* Estilos para el contenido del popup */
+  .container {
+    padding: 20px;
+    font-weight: bolder;
+    background-color: #ff8400;
+  }
+  ::ng-deep .custom-popup {
+    background-color: #ff8400;
+    border-radius: 10px;
+}
+
+
+
+::ng-deep .dark-overlay {
+mat-dialog-container {
+  background-color: #ff8400;
+}
+}

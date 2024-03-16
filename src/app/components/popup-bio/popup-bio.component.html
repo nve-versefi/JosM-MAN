@@ -1,0 +1,144 @@
+<div class="container">
+        
+<ng-container *ngIf="data.instrumentos">
+  <h3>{{ data.instrumentos.nombre }}</h3>
+  <h4>Bolsa A</h4>
+  <div *ngFor="let musico of data.musicos">
+    <div *ngIf="musico.bolsa == 'Bolsa A'">
+    <p>{{ musico.nombre }}: ({{musico.puesto}})</p>
+  </div>
+  </div>
+
+  <h4>Bolsa B</h4>
+  <div *ngFor="let musico of data.musicos">
+    <div *ngIf="musico.bolsa == 'Bolsa B'">
+    <p>{{ musico.nombre }}: ({{musico.puesto}}) </p>
+  </div>
+  </div>
+
+</ng-container>
+
+
+  <ng-container *ngIf="data.persona; else itemBlock">
+    <h3>{{ data.persona.nombre }}</h3>
+    <p>{{ data.persona.descripcion }}</p>
+  </ng-container>
+  
+  <ng-template #itemBlock>
+    <ng-container *ngIf="data.item.titulo=='¿QUÉ HARÁS EN UN ENCUENTRO?'">
+      <section>
+        <h2>¿QUÉ HARÁS EN UN ENCUENTRO?</h2>
+        <p>La JOsM llevará a cabo, preferiblemente en etapas de vacaciones escolares, encuentros en los que se realizarán:</p>
+      </section>
+    
+      <section >
+        <h3>Dos o tres sesiones con profesores de prestigio nacional e internacional</h3>
+        <p>Fomentando la convivencia, para potenciar que nos puedan aportar conocimientos instrumentales destinados al desarrollo de los músicos y consejos prácticos para defender de manera más eficiente el repertorio. También queremos que nos puedan hablar de sus experiencias personales y profesionales en el mundo de la música, cultivando un clima de interrelación entre todas las personas que forman parte de la JOsM y los profesores.</p>
+    
+        <!-- Agrega más secciones según sea necesario -->
+    
+        <h3>Otra información Relevante:</h3>
+        <ul>
+          <li>Pautas profesionales: queremos ayudar a los jóvenes a desarrollarse como músicos y profesionales, por lo que inculcaremos valores y proporcionaremos experiencia para ayudarles a marcar la diferencia.</li>
+          <li>Becas para los músicos. Vamos a desarrollar un apoyo financiero para que los músicos se sigan desarrollando.</li>
+          <li>La JOsM organizará la bolsa de instrumentistas mediante pruebas de acceso que contarán con el arbitraje de músicos profesionales.</li>
+          <li>La JOsM organizará el transporte de material para los ensayos y conciertos.</li>
+          <li>La JOsM organizará la disposición de los instrumentos para llevar a cabo la actividad de ensayos.</li>
+        </ul>
+      </section>
+    </ng-container>
+
+<ng-container *ngIf="data.item.titulo=='LOS ENCUENTROS'">
+
+<p>Para cualquier necesidad técnica o no musical, el integrante debe ponerse en contacto con los Inspectores y personal asistente de la JOsM que apoyarán las labores organizativas de la Orquesta. Los inspectores tendrán la función de controlar los horarios y la participación de los músicos, por lo que si un músico tiene un problema puntual debe comunicar su situación a los inspectores.</p>
+
+<p>Es muy importante la puntualidad y el respeto de los horarios, por respeto a los compañeros y a la propia música.</p>
+
+<p>Siempre en los encuentros hay una persona encargada del archivo que entregará y recogerá en todo momento las particellas, no se pueden llevar fuera de los encuentros.</p>
+
+</ng-container>
+
+<ng-container *ngIf="data.item.titulo=='SOBRE CONVOCATORIAS Y BOLSA JOsM'">
+
+  <p>Después de cada proceso selectivo, un músico de la JOsM tendrá la oportunidad de pertenecer a la bolsa, si resulta seleccionado, durante una vigencia de 2 años.</p>
+  
+  <p>Un músico perteneciente a la JOsM puede presentarse a una nueva convocatoria de pruebas de acceso para ascender su puesto en bolsa conservando el puesto actual sin perderlo en caso de que no mejore, si su plazo de pertenencia a la JOsM está vigente.</p>
+  
+  <p>Una vez llamado un músico a un encuentro tendrá la posibilidad de confirmar al mismo durante un período de 72h desde el envío del mail de la convocatoria (<a href="mailto:bolsajosm@gmail.com">bolsajosm@gmail.com</a>).</p>
+  
+  <p>Todo músico de la JOsM tiene derecho a declinar una invitación por temporada, sin que su puesto en bolsa se vea afectado por ello, manteniendo la posición otorgada en los procesos selectivos.</p>
+  
+  <p>Una vez un músico confirmó la asistencia a un encuentro, si rectifica y declina la invitación después de su aceptación (cuando la causa no es de fuerza mayor) se procederá a poner a ese músico en último lugar de la bolsa.</p>
+  
+  <p>La seriedad es una actitud importante en una organización como una orquesta. Una vez un músico confirmó la asistencia a un encuentro, si rectifica y declina la invitación en un periodo menor de 5 días previos, o no se presenta al encuentro (cuando la causa no es de fuerza mayor) se procederá a la expulsión automática de la bolsa de la JOsM.</p>
+  
+  <p>Cuando la JOsM recibe peticiones para organizar contratos paralelos a las actividades propias de la orquesta, se invitará de forma voluntaria con una remuneración aproximada a un contrato profesional a músicos de la bolsa JOsM en orden de bolsa.</p>
+  
+  <p>Se programarán actuaciones solistas, eventos, música de cámara como añadido a los cuatro encuentros máximos por temporada o giras, pero siempre de forma voluntaria, como una idea de ayuda económica y profesional pensando en los jóvenes músicos y su futuro profesional.</p>
+  
+  <p>Si en algún encuentro un miembro de la bolsa cubre un puesto al que no ha sido seleccionado recibe la beca correspondiente al resultado del Proceso de Selección. La JOsM ve la posibilidad de tocar en un puesto superior como una oportunidad mayor de aprendizaje y una oportunidad de una experiencia.</p>
+  
+  <p>La JOsM otorgará una beca, que es una pequeña ayuda económica que dependerá del encuentro, del puesto en la bolsa, del número de participantes, así como de las aportaciones de los patrocinadores, benefactores y mecenas.</p>
+  
+  <p>Las becas están estimadas bajo el siguiente criterio: Concertino 130% (debe mantener reuniones con l@s maestr@s), ayuda de concertino 110%, solista 100%, ayuda de solista 90%, Tutti bolsa A 60%, Tutti bolsa B mención 30%, Tutti bolsa B sin beca.</p>
+  
+  <p>La JOsM es una orquesta formativa que tiene como principal objetivo la formación musical y personal de sus músicos. Las becas son simplemente una ayuda económica simbólica para apoyarles con sus carreras y estudios musicales.</p>
+  
+  <p>Todos los aspirantes a la JOsM deberán tener firmada la hoja de derechos de imagen para participar en ella.</p>
+  
+</ng-container>
+
+
+<ng-container *ngIf="data.item.titulo=='RECOMENDACIONES:'">
+  <p>Lo más importante en la JOsM es el cariño y respeto entre compañeros, por ello se hace necesario incidir en una serie de normas y recomendaciones para hacer del ambiente de trabajo algo único:</p>
+
+  <ul>
+    <li>Sonríe: es gratis y los demás casi siempre te devuelven lo que tú les das.</li>
+    <li>Lee con atención la información que te envían de forma oficial: como este documento, los horarios, las convocatorias, etc. La mayoría de veces muchos estudiantes lamentan que no reciben la información a tiempo en muchos proyectos y eso nos altera, pero por otra parte donde sí la tenemos hay veces que no le prestamos la atención adecuada. Es obvio que debemos pedir respeto a nuestro tiempo y contar con la información que rodea a nuestro trabajo es trascendental. Si no llega, hay veces que es porque el proceso está parado en un punto, al menos, en esta orquesta, no se van a dejar las cosas para el último día, salvo que un eslabón de la cadena se haya roto, el ejemplo es este encuentro que se programó con muy poco tiempo y aún así hemos podido tener con un tiempo prudente todo a nuestro alcance.</li>
+    <li>Si algo no entiendes para qué se hace, sirve, pregunta con cariño. Esta orquesta es campo de cultivo y siempre es una excelente oportunidad de aprender algo que a lo mejor desconocías o de ayudar a mejorar algo que quizás nadie había observado.</li>
+    <li>Puntualidad: es vital como respeto al tiempo del resto de compañeros de la Orquesta y es una norma básica.</li>
+    <li>Actitud Proactiva: cada vez más importante en este mundo casi más o igual que tocar bien.</li>
+    <li>Trae en orden tu material: instrumento, accesorios, sordinas, papeles. Otra norma básica.</li>
+    <li>Trae preparadas las obras. ¿Sabes que la mayoría de oportunidades laborales de tu futuro dependerán en un alto porcentaje de tus propios compañeros, directores, profesores...? Si ellos observan que tienes una actitud profesional, serán los que cuenten contigo.</li>
+    <li>Enriquece tu red de contactos con tu actitud y tu profesionalidad: la mayoría de orquestas no buscan al mejor en su puesto, sino que buscan al mejor compañero.</li>
+    <li>Localiza cuando hay más cansancio en la orquesta y ayuda con tu actitud a reconvertir la energía: somos energía y la energía se contagia.</li>
+    <li>Cree siempre en ti. Si estás aquí es porque tienes algo especial que se estará desarrollando.</li>
+    <li>Cree en tu compañero. Si está aquí es que tiene algo especial que se estará desarrollando.</li>
+    <li>Si te comparas con alguien, hazlo en positivo. Este mundo es muy rico y nos enseña mucho, pero nuestra propia actitud ante los retos y aprendizajes marca a la larga mucha diferencia.</li>
+    <li>Estudia y prepárate.</li>
+    <li>Mantén un ambiente de trabajo y de silencio en los ensayos. Somos esclavos de la información que no escuchamos y a veces no permitimos escuchar a los demás.</li>
+    <li>Siempre tiene que haber un árbitro que haga lo más eficiente posible el tiempo de ensayo de todos. Si te cortan una pregunta, suele ser por algo positivo. Entiende el contexto complejo de una orquesta.</li>
+    <li>Pon una buena postura en el ensayo: atril, comodidad dentro de las circunstancias. Si ensayamos bien, mejoraremos nuestro rendimiento.</li>
+    <li>Si hay algo que te falta, acude a los Inspectores o ayudantes. Ellos son los que te van a ayudar.</li>
+  </ul>
+  
+</ng-container>
+
+<ng-container *ngIf="data.item.titulo=='¿QUÉ HARÁS EN UN ENCUENTRO?'">
+  <section>
+    <h2>¿QUÉ HARÁS EN UN ENCUENTRO?</h2>
+    <p>La JOsM llevará a cabo, preferiblemente en etapas de vacaciones escolares, encuentros en los que se realizarán:</p>
+  </section>
+
+  <section >
+    <h3>Dos o tres sesiones con profesores de prestigio nacional e internacional</h3>
+    <p>Fomentando la convivencia, para potenciar que nos puedan aportar conocimientos instrumentales destinados al desarrollo de los músicos y consejos prácticos para defender de manera más eficiente el repertorio. También queremos que nos puedan hablar de sus experiencias personales y profesionales en el mundo de la música, cultivando un clima de interrelación entre todas las personas que forman parte de la JOsM y los profesores.</p>
+
+    <!-- Agrega más secciones según sea necesario -->
+
+    <h3>Otra información Relevante:</h3>
+    <ul>
+      <li>Pautas profesionales: queremos ayudar a los jóvenes a desarrollarse como músicos y profesionales, por lo que inculcaremos valores y proporcionaremos experiencia para ayudarles a marcar la diferencia.</li>
+      <li>Becas para los músicos. Vamos a desarrollar un apoyo financiero para que los músicos se sigan desarrollando.</li>
+      <li>La JOsM organizará la bolsa de instrumentistas mediante pruebas de acceso que contarán con el arbitraje de músicos profesionales.</li>
+      <li>La JOsM organizará el transporte de material para los ensayos y conciertos.</li>
+      <li>La JOsM organizará la disposición de los instrumentos para llevar a cabo la actividad de ensayos.</li>
+    </ul>
+  </section>
+</ng-container>
+
+
+      </ng-template>
+
+
+</div>  

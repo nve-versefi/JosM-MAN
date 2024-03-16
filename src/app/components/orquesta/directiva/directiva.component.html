@@ -1,0 +1,25 @@
+<app-page-title [mainHeading]="heading"></app-page-title>
+<div class="personas">
+  <div class="container" *ngFor="let persona of directiva; let i = index">
+    <div class="shape">
+      <div
+        class="image"
+        [style.background-image]="'url(' + persona.imagen + ')'"
+      ></div>
+    </div>
+    <h3 class="nombre">{{ persona.nombre }}</h3>
+    <h3 class="title">{{ persona.titulo }}</h3>
+    <div class="icons">
+      <ng-container *ngFor="let icon of socialMediaIcons">
+        <a *ngIf="persona[icon.property]" [href]="persona[icon.property]" target="_blank" rel="noopener noreferrer">
+          <i class="{{ icon.iconClass }}" aria-hidden="true"></i>
+        </a>
+      </ng-container>
+    </div>
+    
+
+    <div class="boton">
+    <button (click)="openPopup(persona)">Ver biografía</button>
+</div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="cards">
+  <div class="card" *ngFor="let card of cardsData; let i = index">
+    <div class="flip">
+      <div class="front" [id]="card.id" loading="lazy" [style.backgroundImage]="'url(' + card.imagePath + ')'">
+        <h1 class="text-shadow">{{ card.title }}</h1>
+      </div>
+      <div class="back">
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

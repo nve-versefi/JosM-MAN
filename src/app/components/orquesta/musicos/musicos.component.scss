@@ -1,0 +1,168 @@
+.personas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  animation: apear 1.5s ease; 
+  height: 3000px;
+}
+
+
+.container {
+  font-size: 12px;
+  border-radius: 10px;
+  width: 40%;
+  height: 10%;
+  box-shadow: 0 10px 20px black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-size: cover;
+  display: flex; /* Agregado para mostrar en fila */
+  transition:   box-shadow .8s;
+  margin: 10px; /* Ajusta según sea necesario */
+  background-position: 10%;
+}
+
+.container:hover{
+  box-shadow: 0 10px 20px white;
+
+}
+
+@keyframes apear {
+0%{
+  transform: translatex(-100%);
+      opacity: 0.5;
+}
+  50%{
+      transform: translatex(5%);
+      opacity: 0.7;
+
+
+  }
+
+100%{
+  transform: translatex(0);
+      opacity: 1;
+
+}
+}
+
+@keyframes float {
+0%{
+  transform: translatex(1%);
+}
+  
+  25%{
+      transform: translatex(-1%);
+
+  }
+
+  50%{
+      transform: translatex(1%);
+
+  }
+  75%{
+      transform: translatex(-1%);
+
+  }
+
+
+100%{
+  transform: translatex(0);
+}
+}
+
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+
+
+.image {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  border-radius: 50%;
+  border: 8px solid rgb(0, 0, 0);
+position: absolute;
+  box-shadow: 0 2px 15px rgb(58, 54, 54);
+  transform: rotate(-20deg);
+  background-position:inherit ;
+}
+
+.shape {
+
+  width: 400px;
+  height: 40%;
+  margin-left: -20px;
+ display: flex;
+ justify-content: baseline;
+ align-items: center;
+  top: -50px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+  
+  color: rgb(0, 0, 0);
+}
+
+
+.icons {
+  margin-top: 15px;
+}
+
+.icons i {
+  margin-left: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+  color: rgb(40, 163, 194);
+}
+
+.icons i:hover {
+  transform: scale(1.1);
+  color: rgb(18, 192, 235);
+}
+
+.nombre{
+  font-size: 60px;
+  color: white;
+  font-weight: bolder;
+}
+
+
+button {
+  height: 40px;
+  font-size: 13px;
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: white;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+button:hover {
+  transform: translateY(-10%);
+  text-shadow: 10px 10px 10px rgb(47, 0, 255);
+  background-color: orange;
+  color: rgb(255, 255, 255);
+}
