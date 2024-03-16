@@ -46,7 +46,8 @@ export class ContactoComponent implements OnInit {
   }
   enviarCorreo(formularioData: FormularioData) {
     // Use the environment variable for the API URL
-    this.http.post(environment.apiUrl, formularioData).subscribe({
+    const mailerUrl = `${environment.apiUrl}/send-email`;
+    this.http.post(mailerUrl, formularioData).subscribe({
       next: (response: any) => {
         console.log('Respuesta del servidor:', response);
         this.correoEnviado = true; // Mark the email as sent
