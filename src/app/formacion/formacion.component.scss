@@ -1,0 +1,22 @@
+.youtube-section {
+    margin-top: 50px; /* Adjust the value as needed for the top separation */
+    margin-bottom: 50px; /* Adjust the value as needed for the bottom separation */
+  }
+  
+  .youtube-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+  }
+  
+  .youtube-section .video-container {
+    display: flex;
+    justify-content: center; /* This will center the videos if they don't span full width */
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .youtube-section iframe {
+    margin: 10px;
+  }
+  

@@ -49,7 +49,8 @@ import { VideosComponent } from './components/galeria/videos/videos.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FormEventosComponent } from './components/form-eventos/form-eventos.component';
-import { DesarrolloComponent } from './components/desarrollo/desarrollo.component'; // Asegúrate de importar FormsModule
+import { DesarrolloComponent } from './components/desarrollo/desarrollo.component';
+import { FormacionComponent } from './formacion/formacion.component'; // Asegúrate de importar FormsModule
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { DesarrolloComponent } from './components/desarrollo/desarrollo.componen
     VideosComponent,
     FormEventosComponent,
     DesarrolloComponent,
+    FormacionComponent,
   ],
   imports: [HttpClientModule,
     BrowserModule,

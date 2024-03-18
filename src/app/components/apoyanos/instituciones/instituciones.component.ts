@@ -60,10 +60,10 @@ export class InstitucionesComponent {
 
 
   slidesOtros: Slide[] = [
-    { imageUrl: '../../../assets/img/luthier.jpg',
-     link: '/inicio', id: 17 },
+    { imageUrl: '../../../assets/img/adesgam.jpeg',
+     link: 'https://www.adesgam.org/', id: 17 },
      { imageUrl: '../../../assets/img/mosso.png',
-     link: '/inicio' , id: 18},
+     link: 'https://www.fundacionpiumosso.com/' , id: 18},
 
 
     // Agrega más objetos Slide según sea necesario
