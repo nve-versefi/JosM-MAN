@@ -60,7 +60,7 @@ export class InstitucionesComponent {
 
 
   slidesOtros: Slide[] = [
-    { imageUrl: '../../../assets/img/dras.jpg',
+    { imageUrl: '../../../assets/img/luthier.jpg',
      link: '/inicio', id: 17 },
      { imageUrl: '../../../assets/img/mosso.png',
      link: '/inicio' , id: 18},

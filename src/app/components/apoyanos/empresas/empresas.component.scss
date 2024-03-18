@@ -123,3 +123,16 @@ svg {
   margin: auto;
   fill: white;
 }
+.logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust the space between logos as needed */
+}
+
+.logo {
+  /* Ensure logos are of the same size. Adjust width and height as necessary. */
+  width: 100px; /* Example size */
+  height: auto;
+  object-fit: contain; /* Keeps aspect ratio */
+}
